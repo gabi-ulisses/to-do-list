@@ -1,0 +1,41 @@
+<svg width="280" height="70" viewBox="0 0 280 70" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Logo TaskShift">
+  <style>
+    .text-dark { fill:rgb(24, 24, 24); font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: 700; font-size: 40px; }
+    .text-light { fill:rgb(115, 115, 115); font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: 700; font-size: 40px; }
+    .rotate-left { transform-origin: 145px 50px; animation: tiltLeft 2s infinite alternate ease-in-out; }
+    .rotate-right { transform-origin: 185px 50px; animation: tiltRight 2s infinite alternate ease-in-out; }
+    .drag-line {
+      stroke:rgb(139, 139, 139);
+      stroke-width: 4;
+      stroke-linecap: round;
+      stroke-dasharray: 8 6;
+      animation: dashMove 1.5s linear infinite;
+    }
+    @keyframes dashMove {
+      to { stroke-dashoffset: 14; }
+    }
+    @keyframes tiltLeft {
+      0% { transform: rotate(-15deg); }
+      100% { transform: rotate(-7deg); }
+    }
+    @keyframes tiltRight {
+      0% { transform: rotate(15deg); }
+      100% { transform: rotate(7deg); }
+    }
+  </style>
+
+  <!-- "Tas" texto normal -->
+  <text x="10" y="50" class="text-dark">Tas</text>
+
+  <!-- "k" inclinado com animação -->
+  <text x="145" y="50" class="text-dark rotate-left">k</text>
+
+  <!-- Linha diagonal animada entre k e S -->
+  <line x1="162" y1="28" x2="180" y2="45" class="drag-line" />
+
+  <!-- "S" inclinado com animação -->
+  <text x="185" y="50" class="text-light rotate-right">S</text>
+
+  <!-- "hift" texto normal -->
+  <text x="210" y="50" class="text-light">hift</text>
+</svg>
